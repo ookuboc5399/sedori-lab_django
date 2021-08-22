@@ -33,7 +33,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField('メールアドレス', unique=True)
     first_name = models.CharField(('姓'), max_length=30)
     last_name = models.CharField(('名'), max_length=30)
-    cource = models.CharField(('コース'), max_length=30, blank=True)
+    cource = models.CharField(('コース'), max_length=30)
     created = models.DateTimeField(('入会日'), default=timezone.now)
 
     is_staff = models.BooleanField(

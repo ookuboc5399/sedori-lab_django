@@ -1,0 +1,53 @@
+{% extends "api/base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<div class="text-white grid grid-cols-3 gap-4">
+    <div class="col-span-2" >
+        <img class="object-left" src="../../static/images/question.png" alt=""/>
+    </div>
+
+    <div>
+        <div class="">
+            <h5 class="text-3xl tracking-wider pb-16 pt-16 ">よくあるご質問</h5>
+        </div>
+        <div class="border-2 bg-white text-black pr-16">
+            <div class="text-xl">キーワード検索</div>
+            <form method="post">
+                {% csrf_token %}
+                <div class="align-items-center">
+                    {% render_field form.title class="border border-black " placeholder="キーワードから探す" %}
+                    <button class="g-white hover:bg-blue-500 font-semibold hover:text-white py-1 px-1  mb-4 border border-black hover:border-transparent rounded-full py-1 px-6" type="submit">検索</button>    
+                </div>
+            </form>
+        </div>
+        <div>
+            <ul class="py-6">
+                <div class="divide-y">
+                    <li>
+                        <a href="/s/a/2758" data-special-link="true" class="">
+                            <div class="py-4 pb-4 text-2xl">プレゼントとして購入できるギフトカード（商品券）はありますか？</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/s/a/000002240" data-special-link="true" class="">
+                            <div class="py-4 pb-4 text-2xl">スターバックス カードの入金方法について知りたい</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/s/a/2453" data-special-link="true" class="slds-p-vertical_small slds-border_bottom slds-hyphenate">
+                            <div class="py-4 pb-4 text-2xl">店舗の会計でクレジットカードなどのキャッシュレス決済は利用できますか？</div>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+{% endblock %}

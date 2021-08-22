@@ -1,0 +1,29 @@
+{% extends "api/base.html" %}
+
+{% block content %}
+
+<div class="text-center my-5">
+    <div class="">
+        <h3>「{{ keyword }}」の検索結果</h3>
+    </div>
+    <div class="">
+        {% if product_data %}
+            <div class="">
+                <div class="">
+                    <img class="" src="{{ product_data.image }}" alt="">
+                    <div class="">
+                        <h5 class="">{{ product_data.itemName }}</h5>
+                    </div>
+                    <div class="">
+                        <h5 class="">{{ product_data.itemPrice }}</h5>
+                    </div>
+                    <a class="" href=""></a>
+                </div>
+            </div>
+        {% else %}
+            <p>該当するものはありません</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

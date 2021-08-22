@@ -15,13 +15,10 @@
 <body class="flex flex-col min-h-screen bg-yellow-50">
     <nav class="flex justify-end h-20 z-20 items-center space-x-4 bg-white text-xl">
         <div>
-            <a class="" href="/">ホーム</a>
+            <a class="" href="{% url 'account' %}">ホーム</a>
         </div>
         <div>
-            <a class="" href="{% url 'index_detail' %}">sedori-labのサービス</a>
-        </div>
-        <div>
-            <a class="" href="{% url 'cource' %}">コース</a>
+            <a class="" href="{% url 'cource' %}">使い方</a>
         </div>
         <div>
             <a class="" href="{% url 'contact' %}">お問い合わせ</a>
@@ -32,9 +29,6 @@
             <a class="" href="{% url 'account_logout' %}">ログアウト</a>
         </div>
         {% else %}
-        <div>
-            <a class="" href="{% url 'account_signup' %}">会員登録</a>
-        </div>
         <div class="pr-8">
             <a class="" href="{% url 'account_login' %}">ログイン</a>
         </div>

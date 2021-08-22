@@ -1,0 +1,138 @@
+{% extends "api/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="md:flex pt-20">
+    <div class="">
+        <img class="col-start-8 row-start-8" src=""style="">
+    </div>
+</div>
+
+<div class="flex justify-end ">
+    <a href="./ebay_detail">
+        <img src="../static/images/ebay_export.png" alt="ebay輸出" width="240" height="113">
+    </a>
+    <a href="./kokunai_detail">
+        <img src="../static/images/national_resale.png" alt="国内転売" width="255" height="113">
+    </a>
+    <a href="./import_detail">
+        <img src="../static/images/japan_import.png" alt="日本輸入" width="245" height="113">
+    </a>
+    <a href="./amazonoem_detail">
+        <img src="../static/images/amazon_oem.png" alt="AmazonOEM" width="240" height="113">
+    </a>
+</div>
+
+
+<div class="grid grid-cols-1 sm:grid-cols-2 mx-12">
+        <div class="col-start-1 row-start-1 flex sm:col-start-1 sm:row-span-1 ">
+            <div class="col-span-2">
+                <img class="relative object-cover" src="../static/images/ebayexport.png"style="height:600px">
+            </div>
+        </div>
+        <div class="relative z-10 col-start-2 row-start-1 px-4 pt-40 pb-3 bg-gradient-to-t from-black sm:bg-none">
+            <div class="text-3xl  text-black p-8">
+                <p class="text-6xl  text-black p-8"> 
+                    ebay
+                <p class="text-4xl  text-black pl-20"> 
+                    輸出
+                </p>
+            </div>
+            <div>
+                <p class="text-3xl text-center text-black p-8"> 
+                    食べたり眠ったりトイレに行く以外はすべてVRの世界で過ごす、<br>
+                    そんな未来がすぐそこまで迫っている! <br>
+                    そして現実世界から仮想世界への移行はすでに始まっている。
+                </p>
+                <div class="g-white hover:bg-blue-500 font-semibold hover:text-white py-1 px-1  mb-4 border border-black hover:border-transparent rounded-full py-1 px-6" type="submit">
+                    <button onclick="location.href='./ebay_detail/'">詳しく見る</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="relative z-10 col-start-1 row-start-2 px-4 pt-40 pb-3 bg-gradient-to-t from-black sm:bg-none">
+            <div class="text-3xl  text-black p-8">
+                <p class="text-6xl  text-black p-8"> 
+                    国内
+                <p class="text-4xl  text-black pl-20"> 
+                    転売
+                </p>
+            </div>
+            <div>
+                <p class="text-3xl text-center text-black p-8"> 
+                    食べたり眠ったりトイレに行く以外はすべてVRの世界で過ごす、<br>
+                    そんな未来がすぐそこまで迫っている! <br>
+                    そして現実世界から仮想世界への移行はすでに始まっている。
+                </p>
+                <div class="g-white hover:bg-blue-500 font-semibold hover:text-white py-1 px-1  mb-4 border border-black hover:border-transparent rounded-full py-1 px-6" type="submit">
+                    <button onclick="location.href='./kokunai_detail/'">詳しく見る</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-start-1 row-start-2 flex sm:col-start-2 sm:row-span-3">
+            <div class="col-span-2">
+                <img class="object-cover" src="../static/images/kokunai.png"style="height:600px">
+            </div>
+        </div>   
+
+
+
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 mx-12">
+    <div class="col-start-1 row-start-1 flex sm:col-start-1 sm:row-span-1 ">
+        <div class="col-span-2">
+            <img class="relative object-cover" src="../static/images/japanimport.png"style="height:600px">
+        </div>
+    </div>
+    <div class="relative z-10 col-start-2 row-start-1 px-4 pt-40 pb-3 bg-gradient-to-t from-black sm:bg-none">
+        <div class="text-3xl  text-black p-8">
+            <p class="text-4xl  text-black p-8"> 
+                日本
+            <p class="text-6xl  text-black pl-20"> 
+                輸入
+            </p>
+        </div>
+        <div>
+            <p class="text-3xl text-center text-black p-8"> 
+                食べたり眠ったりトイレに行く以外はすべてVRの世界で過ごす、<br>
+                そんな未来がすぐそこまで迫っている! <br>
+                そして現実世界から仮想世界への移行はすでに始まっている。
+            </p>
+            <div class="g-white hover:bg-blue-500 font-semibold hover:text-white py-1 px-1  mb-4 border border-black hover:border-transparent rounded-full py-1 px-6" type="submit">
+                <button onclick="location.href='./ebay_detail/'">詳しく見る</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="relative z-10 col-start-1 row-start-2 px-4 pt-40 pb-3 bg-gradient-to-t from-black sm:bg-none">
+        <div class="text-3xl  text-black p-8">
+            <p class="text-6xl  text-black p-8"> 
+                AmazonOEM
+            </p>
+        </div>
+        <div>
+            <p class="text-3xl text-center text-black p-8"> 
+                食べたり眠ったりトイレに行く以外はすべてVRの世界で過ごす、<br>
+                そんな未来がすぐそこまで迫っている! <br>
+                そして現実世界から仮想世界への移行はすでに始まっている。
+            </p>
+            <div class="g-white hover:bg-blue-500 font-semibold hover:text-white py-1 px-1  mb-4 border border-black hover:border-transparent rounded-full py-1 px-6" type="submit">
+                <button onclick="location.href='./kokunai_detail/'">詳しく見る</button>
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-start-1 row-start-2 flex sm:col-start-2 sm:row-span-3">
+        <div class="col-span-2">
+            <img class="object-cover " src="../static/images/amazonoem.jpg"style="height:600px">
+        </div>
+    </div>   
+</div>
+
+ {% endblock %}

@@ -4,6 +4,8 @@ from accounts.forms import SignupUserForm
 from allauth.account import views
 
 
+
+
 class ProfileView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'accounts/profile.html')
@@ -22,3 +24,10 @@ class LogoutView(views.LogoutView):
 class SignupView(views.SignupView):
     template_name = 'accounts/signup.html'
     form_class = SignupUserForm
+
+class AccountView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'accounts/account.html')
+
+class HowtouseView(View):
+    template_name = 'accounts/howtouse.html'

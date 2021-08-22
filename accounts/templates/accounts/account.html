@@ -1,0 +1,121 @@
+{% extends "accounts/base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+
+<div class="justify-end">
+    <h3 class="mb-4">Profile</h3>
+    <div class="mb-5">
+        <div class="row">
+            <div class="col-md-8">
+                <p>{{ profile_data.introduction|linebreaksbr }}</p>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center px-5 py-4">
+                    <div class="avatar mb-3">
+                        <img class="card-img-top rounded-circle" src="{{ profile_data.subimage.url }}" alt="">
+                    </div>
+                    <h5 class="font-weight-bolder">{{ profile_data.name }}</h5>
+                    <p class="mb-3 small text-center">{{ profile_data.job|linebreaksbr }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="flex justify-between flex-wrap p-10">
+    <div class="text-center">
+        <div class="text-2xl">
+            1 ebay輸出
+        </div>
+        <div class="text-xl">
+            リサーチ
+        </div>
+        <div class="text-xl ">
+            ebay circle
+        </div>
+    </div>
+
+    <div class="">
+        <div class="text-xl text-center">
+            リサーチ
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7">
+            ebay circle
+        </div>
+    </div>
+
+    <div class="card card-profile my-5">
+        <div class="text-center">
+            仕入れ
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7">
+            店舗
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7">
+            メルカリ
+        </div>
+    </div>
+
+    <div class="card card-profile my-5">
+        <div class=" text-center">
+            出品
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7">
+            Amazon
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7">
+            ebay
+        </div>
+    </div>
+
+    <div class="">
+        <div class=" text-center">
+            在庫管理
+        </div>
+        <div class="">
+
+        </div>
+        <div class="">
+  
+        </div>
+    </div>
+</div>
+    
+
+<div class="border-black">
+    <div class="">
+        <h5 class=""></h5>
+        <table class="border-black">
+            <tbody>
+                <tr>
+                    <th class="header">名前</th>
+                </tr>
+                <tr>
+                    <td class="">1　ebay輸出</td>
+                    <td class="">2　国内転売</td>
+                    <td class="">3　日本輸入</td>
+                    <td class="">4　AmazonOEM</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<h1>フローチャート</h1>
+
+<div class="">
+    <img class="mx-auto" src="../static/images/ebay_circle.png" style="">
+</div>
+
+<div class="md:flex pt-20">
+    <div class="p-72">
+        <a href="http://buppan-worldwide.com/"><img class="cursor-pointer" src="{% static 'images/blog(sedori).png' %}"></a>
+         
+    </div>
+    <div class="p-72">
+        <a href="https://discord.gg/2tq8YQuP"><img class="cursor-pointer" src="{% static 'images/Discord.png' %}" ></a>
+    </div>
+</div>
+
+{% endblock %}

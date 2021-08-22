@@ -1,31 +1,48 @@
-{% extends "app/base.html" %}
+{% extends "api/base.html" %}
+{% load static %}
 {% load widget_tweaks %}
 
 {% block content %}
 
-<div class="card card-auth my-5 mx-auto">
-    <div class="card-body">
-        <h5 class="card-title text-center">サインアップ</h5>
-        <form method="post" class="form-auth">
+<div class="flex justify-center relative">
+    <div class="max-w-2xl z-10 bg-white p-7 mt-6">
+        <div class="font-bold text-2xl text-center mb-4 mt-10">
+            VR Rev.会員登録
+        </div>
+        <form method="post">
             {% csrf_token %}
-            <div class="form-label-group form_wrap form_wrap-2">
-                {% render_field form.first_name class="form-control" placeholder="姓" %}
-                {% render_field form.last_name class="form-control" placeholder="名" %}
+            <div class="mb-4">
+                <label class="font-bold" >
+                    メールアドレス
+                </label>
+                {% render_field form.email class="w-full p-3 mt-3 border border-black " placeholder="メールアドレス" %}
             </div>
-            <div class="form-label-group">
-                {% render_field form.email class="form-control" placeholder="メールアドレス" %}
+            <div class="mb-4">
+                <label class="font-bold" >
+                    パスワード
+                </label>
+                {% render_field form.password1 class="w-full p-3 mt-3 border border-black " placeholder="パスワード" %}
             </div>
-            <div class="form-label-group">
-                {% render_field form.password1 class="form-control" placeholder="パスワード" %}
+            <div class="mb-4">
+                <label class="font-bold" >
+                    パスワード確認
+                </label>
+                {% render_field form.password2 class="w-full p-3 mt-3 border border-black " placeholder="パスワード(確認)" %}
             </div>
-            <div class="form-label-group">
-                {% render_field form.password2 class="form-control" placeholder="パスワード(確認)" %}
+            <div class="mb-10">
+                <label class="font-bold" >
+                    ユーザー名
+                </label>
+                {% render_field form.password2 class="w-full p-3 mt-3 border border-black " placeholder="パスワード(確認)" %}
             </div>
-            <div class="button mx-auto">
-                <button class="btn btn-lg btn-primary btn-block mx-auto" type="submit">サインアップ</button>
+            <div class="text-center">
+                <button class="bg-white hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-3 px-7 border border-blue-500 hover:border-transparent rounded" type="submit">
+                    登録
+                </button>
             </div>
         </form>
     </div>
 </div>
+
 
 {% endblock %}
