@@ -1,0 +1,56 @@
+{% extends "api/base.html" %}
+
+{% block content %}
+
+<form action="/create-checkout-session" method="POST">
+    <!-- Note: If using PHP set the action to /create-checkout-session.php -->
+  
+    <input type="hidden" name="priceId" value="price_G0FvDp6vZvdwRZ" />
+    <button type="submit">Checkout</button>
+  </form>
+  
+  
+  
+  <!-- {% if user.is_authenticated %}
+  <form action="/create-checkout-session" method="POST">
+    <section>
+      <button type="button" id="checkout-button">1か月無料体験申し込み</button>
+    </section>
+  </form>
+  
+  <script type="text/javascript">
+    // Create an instance of the Stripe object with your publishable API key
+    var stripe = Stripe("pk_live_51JQu8WBHrrkrpmkS3FAPZsOxnpSSKXFwsnGdfqfGr1FRlgoRdvZaN64KqiLPSe0Bzzjd2o1hjEc3IIaAGFPAGIW200HmTQ2qAk");
+    var checkoutButton = document.getElementById("checkout-button");
+  
+    checkoutButton.addEventListener("click", function () {
+      fetch("/create_checkout_session/", {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json; charset=UTF-8',
+            'X-CSRFToken': '{{ csrf_token }}'
+        },
+      })
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (session) {
+          return stripe.redirectToCheckout({ sessionId: session.id });
+        })
+        .then(function (result) {
+          // If redirectToCheckout fails due to a browser or network
+          // error, you should display the localized error message to your
+          // customer using error.message.
+          if (result.error) {
+            alert(result.error.message);
+          }
+        })
+        .catch(function (error) {
+          console.error("Error:", error);
+        });
+    });
+  </script>
+  {% endif %} -->
+  
+  {% endblock %}

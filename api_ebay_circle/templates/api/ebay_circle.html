@@ -6,9 +6,9 @@
 <div class="text-center my-5">
     <form method="post">
         {% csrf_token %}
-        <div class="align-items-center">
+        <div class="align-items-center text-2xl">
             {% render_field form.title class="form-control" placeholder="ebay商品名入力" %}
-            <button class="btn btn-primary mt-2" type="submit">検索</button>    
+            <button class="btn btn-primary mt-2 bg-blue-100 text-2xl" type="submit">検索</button>    
         </div>
     </form>
 </div>

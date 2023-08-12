@@ -13,7 +13,8 @@ urlpatterns = [
     path('contact/', views.CONTACTView.as_view(), name='contact'),
     path('question/', views.QUESTIONView.as_view(), name='question'),
     path('privacy/', views.PRIVACYView.as_view(), name='privacy'),
-    path('create_checkout_session/', views.create_checkout_session, name='checkout_session'),
+    path('create-checkout-session/', views.create_checkout_session, name='checkout_session'),
     path('success/', views.PaymentSuccessView.as_view(), name='success'),
     path('cancel/', views.PaymentCancelView.as_view(), name='cancel'),
+    path('checkout/', views.PaymentCheckoutView.as_view(), name='checkout'),
 ]

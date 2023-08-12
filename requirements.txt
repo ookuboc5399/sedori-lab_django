@@ -3,3 +3,13 @@ djangorestframework~=3.11.0
 pillow~=8.1.0
 django-widget-tweaks~=1.4.8
 django-allauth~=0.41.0
+bs4
+lxml
+amazon-paapi5
+dj-database-url
+dj-static
+python-decouple
+django-environ
+gunicorn
+psycopg2-binary
+whitenoise

@@ -202,6 +202,8 @@ class PRIVACYView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'api/privacy.html', {
         })
+class PaymentCheckoutView(generic.TemplateView):
+   template_name = "api/checkout.html"
 
 class PaymentSuccessView(TemplateView):
     template_name = "api/success.html"
@@ -209,8 +211,6 @@ class PaymentSuccessView(TemplateView):
 class PaymentCancelView(TemplateView):
     template_name = "api/cancel.html"
 
-def create_checkout_session(request):
-    pass
 
 
 

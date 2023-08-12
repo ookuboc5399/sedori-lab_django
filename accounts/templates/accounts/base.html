@@ -18,10 +18,12 @@
             <a class="" href="{% url 'account' %}">ホーム</a>
         </div>
         <div>
-            <a class="" href="{% url 'cource' %}">使い方</a>
+            <a class="" href="{% url 'howtouse' %}">使い方</a>
         </div>
         <div>
-            <a class="" href="{% url 'contact' %}">お問い合わせ</a>
+            <a href="{% url 'mypage' %}" class="">
+                <img class="rounded-full" src="{% static 'images/profile.png' %}" width="30" height="30" alt="">
+            </a>
         </div>
 
         {% if user.is_authenticated %}

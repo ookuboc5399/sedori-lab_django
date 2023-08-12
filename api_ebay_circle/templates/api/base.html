@@ -13,33 +13,39 @@
 </head>
 
 <body class="flex flex-col min-h-screen bg-yellow-50">
-    <nav class="flex justify-end h-20 z-20 items-center space-x-4 bg-white text-xl">
-        <div>
-            <a class="" href="/">ホーム</a>
+    <div>
+        <div class="float-left bg-white w-10">
+            　<img src="{% static 'images/sedorilab_toumei.png' %}">
         </div>
-        <div>
-            <a class="" href="{% url 'index_detail' %}">sedori-labのサービス</a>
-        </div>
-        <div>
-            <a class="" href="{% url 'cource' %}">コース</a>
-        </div>
-        <div>
-            <a class="" href="{% url 'contact' %}">お問い合わせ</a>
-        </div>
-
-        {% if user.is_authenticated %}
-        <div>
-            <a class="" href="{% url 'account_logout' %}">ログアウト</a>
-        </div>
-        {% else %}
-        <div>
-            <a class="" href="{% url 'account_signup' %}">会員登録</a>
-        </div>
-        <div class="pr-8">
-            <a class="" href="{% url 'account_login' %}">ログイン</a>
-        </div>
-        {% endif %}
-    </nav>
+        <nav class="flex justify-end h-20 z-20 items-center space-x-4 bg-white text-xl">
+            <div>
+                <a class="" href="/">ホーム</a>
+            </div>
+            <div>
+                <a class="" href="{% url 'index_detail' %}">sedori-labのサービス</a>
+            </div>
+            <div>
+                <a class="" href="{% url 'cource' %}">コース</a>
+            </div>
+            <div>
+                <a class="" href="{% url 'contact' %}">お問い合わせ</a>
+            </div>
+    
+            {% if user.is_authenticated %}
+            <div>
+                <a class="" href="{% url 'account_logout' %}">ログアウト</a>
+            </div>
+            {% else %}
+            <div>
+                <a class="" href="{% url 'account_signup' %}">会員登録</a>
+            </div>
+            <div class="pr-8">
+                <a class="" href="{% url 'account_login' %}">ログイン</a>
+            </div>
+            {% endif %}
+        </nav>
+    </div>
+    
 
     <main class="flex-1">
         <div class="">

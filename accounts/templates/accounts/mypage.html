@@ -1,0 +1,45 @@
+{% extends "accounts/base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+
+<div class="flex-wrap">
+    <div class="w-2/12 float-left bg-blue-100">
+        <div class="card">
+                <aside class="sidebar">
+                    <div id="online_field">
+                        <img id="user_picture" src="{% static 'images/default.jpg' %}" style="">
+                    </div>
+                    <h5 class="font-weight-bold">ookubo</h5>
+                    <div class="text-center mb-3">
+                                                        <img src="https://sellersket.com/theme/default/images/page/rank/icon-normal.png" alt="">
+                                                        <p>現在は<a href="https://sellersket.com/ranking">通常会員</a>です。</p>
+                            <p class="text-2">スタンダードコース選択中</p>
+                    </div>
+                    <div class="row profile-edit-wrap">
+                        <div class="col-6 offset-lg-0 col-lg-12">
+                            <a class="profile_edit" href="https://sellersket.com/user/profile">
+                                <img src="https://sellersket.com/assets/images/0509/Asset4.png">
+                            </a>
+                        </div>
+                        <div class="col-6 offset-lg-0 col-lg-12">
+                            <a class="profile_edit" href="https://sellersket.com/subscription">
+                                <img src="https://sellersket.com/assets/images/0509/Asset5.png">
+                            </a>
+                        </div>
+                        <div class="col-6  offset-lg-0 col-lg-12">
+                            <a class="profile_edit" href="https://sellersket.com/user/mypage_share">
+                                <img src="https://sellersket.com/assets/images/0509/Asset6.png">
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+        </div>
+    </div>
+
+    <div class="w-10/12 float-right">
+
+    </div>
+</div>
+
+{% endblock %}

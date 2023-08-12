@@ -2,28 +2,142 @@
 
 {% block content %}
 
-<div class="text-center my-5">
-    <div class="">
-        <h3>「{{ keyword }}」の検索結果</h3>
-    </div>
-    <div class="">
-        {% if product_data %}
-            <div class="">
+<div class="flex justify-between flex-wrap p-10 bg-red-100">
+    <div class="text-center my-5 w-1/4">
+        <div class="text-4xl">
+            ebay価格
+        </div>
+        <div class="">
+            <h3>「{{ keyword }}」の検索結果</h3>
+        </div>
+        <div class="">
+            {% if product_data %}
                 <div class="">
-                    <img class="" src="{{ product_data.image }}" alt="">
                     <div class="">
-                        <h5 class="">{{ product_data.itemName }}</h5>
+                        <img class="" src="{{ product_data.image }}" alt="">
+                        <div class="">
+                            <h5 class="">{{ product_data.itemName }}</h5>
+                        </div>
+                        <div class="">
+                            <h5 class="">{{ product_data.itemPrice }}</h5>
+                        </div>
+                        <a class="" href=""></a>
                     </div>
-                    <div class="">
-                        <h5 class="">{{ product_data.itemPrice }}</h5>
-                    </div>
-                    <a class="" href=""></a>
                 </div>
+            {% else %}
+                <p>該当するものはありません</p>
+            {% endif %}
+        </div>
+    </div>
+    
+    <div class=" w-1/4">
+        <div class="text-center my-5">
+            <div class="text-4xl">
+                Amazon価格
             </div>
-        {% else %}
-            <p>該当するものはありません</p>
-        {% endif %}
+            <div class="">
+                <h3>「{{ keyword }}」の検索結果</h3>
+            </div>
+            <div class="">
+                {% if product_data %}
+                    <div class="">
+                        <div class="">
+                            <img class="" src="{{ product_data.image }}" alt="">
+                            <div class="">
+                                <h5 class="">{{ product_data.itemName }}</h5>
+                            </div>
+                            <div class="">
+                                <h5 class="">{{ product_data.itemPrice }}</h5>
+                            </div>
+                            <a class="" href=""></a>
+                        </div>
+                    </div>
+                {% else %}
+                    <p>該当するものはありません</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="text-center my-5">
+            <div class="text-4xl">
+                Rakuten価格
+            </div>
+            <div class="">
+                <h3>「{{ keyword }}」の検索結果</h3>
+            </div>
+            <div class="">
+                {% if product_data %}
+                    <div class="">
+                        <div class="">
+                            <img class="" src="{{ product_data.image }}" alt="">
+                            <div class="">
+                                <h5 class="">{{ product_data.itemName }}</h5>
+                            </div>
+                            <div class="">
+                                <h5 class="">{{ product_data.itemPrice }}</h5>
+                            </div>
+                            <a class="" href=""></a>
+                        </div>
+                    </div>
+                {% else %}
+                    <p>該当するものはありません</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center my-5  w-1/4">
+        <div class="text-4xl">
+            配送料
+        </div>
+        <div class="">
+            <h3>「{{ keyword }}」の検索結果</h3>
+        </div>
+        <div class="">
+            {% if product_data %}
+                <div class="">
+                    <div class="">
+                        <img class="" src="{{ product_data.image }}" alt="">
+                        <div class="">
+                            <h5 class="">{{ product_data.itemName }}</h5>
+                        </div>
+                        <div class="">
+                            <h5 class="">{{ product_data.itemPrice }}</h5>
+                        </div>
+                        <a class="" href=""></a>
+                    </div>
+                </div>
+            {% else %}
+                <p>該当するものはありません</p>
+            {% endif %}
+        </div>
+    </div>
+    <div class="text-center my-5  w-1/4">
+        <div class="text-4xl">
+            利益
+        </div>
+        <div class="">
+            <h3>「{{ keyword }}」の検索結果</h3>
+        </div>
+        <div class="">
+            {% if product_data %}
+                <div class="">
+                    <div class="">
+                        <img class="" src="{{ product_data.image }}" alt="">
+                        <div class="">
+                            <h5 class="">{{ product_data.itemName }}</h5>
+                        </div>
+                        <div class="">
+                            <h5 class="">{{ product_data.itemPrice }}</h5>
+                        </div>
+                        <a class="" href=""></a>
+                    </div>
+                </div>
+            {% else %}
+                <p>該当するものはありません</p>
+            {% endif %}
+        </div>
     </div>
 </div>
+
 
 {% endblock %}

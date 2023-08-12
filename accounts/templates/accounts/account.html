@@ -3,53 +3,56 @@
 {% load widget_tweaks %}
 {% block content %}
 
-<div class="justify-end">
+<div class="flex justify-end bg-white">
     <h3 class="mb-4">Profile</h3>
     <div class="mb-5">
         <div class="row">
             <div class="col-md-8">
-                <p>{{ profile_data.introduction|linebreaksbr }}</p>
+
             </div>
             <div class="col-md-4">
                 <div class="card text-center px-5 py-4">
                     <div class="avatar mb-3">
                         <img class="card-img-top rounded-circle" src="{{ profile_data.subimage.url }}" alt="">
                     </div>
-                    <h5 class="font-weight-bolder">{{ profile_data.name }}</h5>
-                    <p class="mb-3 small text-center">{{ profile_data.job|linebreaksbr }}</p>
+                    <h5 class="font-weight-bolder">{{ profile_data.first_name }}</h5>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="flex justify-between flex-wrap p-10">
-    <div class="text-center">
-        <div class="text-2xl">
+<div class="flex justify-between flex-wrap p-10 bg-red-100">
+    <div class="text-center border border-black py-10 px-10">
+        <div class="text-3xl text-red-400">
             1 ebay輸出
         </div>
-        <div class="text-xl">
-            リサーチ
+        <div class="text-2xl my-4 ">
+            輸送料
         </div>
-        <div class="text-xl ">
-            ebay circle
+
+        <div class="text-2xl my-4 ">
+            
         </div>
     </div>
 
     <div class="">
-        <div class="text-xl text-center">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
             リサーチ
         </div>
+        <div class="text-xl border border-black rounded py-3 px-7 text-center mb-5">
+            <a href="https://www.ebay.com/" target="_blank" rel="noopener">ebay </a>
+        </div>
         <div class="text-xl border border-black rounded py-3 px-7">
-            ebay circle
+            <a href="{% url 'ebay_circle' %}">ebay circle</a>
         </div>
     </div>
 
-    <div class="card card-profile my-5">
-        <div class="text-center">
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
             仕入れ
         </div>
-        <div class="text-xl border border-black rounded py-3 px-7">
+        <div class="text-xl border border-black rounded py-3 px-7 text-center mb-5">
             店舗
         </div>
         <div class="text-xl border border-black rounded py-3 px-7">
@@ -57,20 +60,218 @@
         </div>
     </div>
 
-    <div class="card card-profile my-5">
-        <div class=" text-center">
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
             出品
         </div>
-        <div class="text-xl border border-black rounded py-3 px-7">
-            Amazon
-        </div>
-        <div class="text-xl border border-black rounded py-3 px-7">
+        <div class="text-xl border border-black rounded py-3 px-7 text-center">
             ebay
         </div>
     </div>
 
     <div class="">
-        <div class=" text-center">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
+            在庫管理
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7 text-center">
+            売上分析
+        </div>
+        <div class="">
+  
+        </div>
+    </div>
+</div>
+
+<div class="flex justify-between flex-wrap p-10 bg-green-100">
+    <div class="text-center border border-black py-10 px-10">
+        <div class="text-3xl text-red-400">
+            2 国内転売
+        </div>
+        <div class="text-2xl my-4">
+            リサーチ
+        </div>
+        <div class="text-2xl  my-4">
+            japan circle
+        </div>
+        <div class="text-2xl my-4 ">
+            輸送料
+        </div>
+        <div class="text-2xl my-4 ">
+            売上分析
+        </div>
+        <div class="text-2xl my-4 ">
+            
+        </div>
+    </div>
+
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
+            リサーチ
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7">
+            japan circle
+        </div>
+    </div>
+
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
+            仕入れ
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7 text-center mb-5">
+            店舗
+        </div>
+    </div>
+
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
+            出品
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7 text-center mb-5">
+            Amazon
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7 text-center">
+            メルカリ
+        </div>
+    </div>
+
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
+            在庫管理
+        </div>
+        <div class="">
+
+        </div>
+        <div class="">
+  
+        </div>
+    </div>
+</div>
+
+<div class="flex justify-between flex-wrap p-10 bg-blue-100">
+    <div class="text-center border border-black py-10 px-10">
+        <div class="text-3xl text-red-400">
+            3 日本輸入
+        </div>
+        <div class="text-2xl my-4">
+            リサーチ
+        </div>
+        <div class="text-2xl  my-4">
+            import circle
+        </div>
+        <div class="text-2xl my-4 ">
+            輸送料
+        </div>
+        <div class="text-2xl my-4 ">
+            売上分析
+        </div>
+        <div class="text-2xl my-4 ">
+            
+        </div>
+    </div>
+
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
+            リサーチ
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7">
+            import circle
+        </div>
+    </div>
+
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
+            仕入れ
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7 text-center mb-5">
+            ebay
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7">
+            Amazon
+        </div>
+    </div>
+
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
+            出品
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7 text-center mb-5">
+            Amazon
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7 text-center">
+            ヤフオク
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7 text-center">
+            メルカリ
+        </div>
+    </div>
+
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
+            在庫管理
+        </div>
+        <div class="">
+
+        </div>
+        <div class="">
+  
+        </div>
+    </div>
+</div>
+
+<div class="flex justify-between flex-wrap p-10">
+    <div class="text-center border border-black py-10 px-10">
+        <div class="text-3xl text-red-400">
+            4 AmazonOEM
+        </div>
+        <div class="text-2xl my-4">
+            リサーチ
+        </div>
+        <div class="text-2xl  my-4">
+            OEM circle
+        </div>
+        <div class="text-2xl my-4 ">
+            輸送料
+        </div>
+        <div class="text-2xl my-4 ">
+            売上分析
+        </div>
+        <div class="text-2xl my-4 ">
+            
+        </div>
+    </div>
+
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
+            リサーチ
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7">
+            OEM circle
+        </div>
+    </div>
+
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
+            仕入れ
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7 text-center mb-5">
+            中国工場
+        </div>
+    </div>
+
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
+            出品
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7 text-center mb-5">
+            Amazon
+        </div>
+        <div class="text-xl border border-black rounded py-3 px-7 text-center">
+            メルカリ
+        </div>
+    </div>
+
+    <div class="">
+        <div class="text-xl border border-black rounded pb-10 px-7 text-center mb-10">
             在庫管理
         </div>
         <div class="">
@@ -102,13 +303,63 @@
     </div>
 </div>
 
-<h1>フローチャート</h1>
+<table class="border-collapse border border-green-800 m-auto ">
+    <thead>
+      <tr>
+        <th class="border border-green-600 h-24"></th>
+        <th class="border border-green-600 w-44 text-xl">スタンダードコース</th>
+        <th class="border border-green-600 w-44 text-xl">スペシャルコース</th>
+        <th class="border border-green-600 w-44 text-xl">プレミアコース</th>
+        <th class="border border-green-600 w-44 text-xl">ロイヤルコース</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border border-green-600 w-44 h-16 text-xl text-center">リサーチツール</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+      </tr>
+      <tr>
+        <td class="border border-green-600 w-44 h-16 text-xl text-center">ebay輸出</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+      </tr>
+      <tr>
+        <td class="border border-green-600 w-44 h-16 text-xl text-center">国内転売</td>
+        <td class="border border-green-600 text-xl text-center">×</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+      </tr>
+      <tr>
+        <td class="border border-green-600 w-44 h-16 text-xl text-center">日本輸入</td>
+        <td class="border border-green-600 text-xl text-center">×</td>
+        <td class="border border-green-600 text-xl text-center">×</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+      </tr>
+      <tr>
+        <td class="border border-green-600 w-44 h-16 text-xl text-center">AmazonOEM</td>
+        <td class="border border-green-600 text-xl text-center">×</td>
+        <td class="border border-green-600 text-xl text-center">×</td>
+        <td class="border border-green-600 text-xl text-center">×</td>
+        <td class="border border-green-600 text-xl text-center">〇</td>
+      </tr>
+      <tr>
+        <td class="border border-green-600 w-44 h-16 text-xl text-center">料金</td>
+        <td class="border border-green-600 text-xl text-center">￥4980</td>
+        <td class="border border-green-600 text-xl text-center">￥7980</td>
+        <td class="border border-green-600 text-xl text-center">￥10000</td>
+        <td class="border border-green-600 text-xl text-center">￥14980</td>
+      </tr>
+    </tbody>    
+</table>
 
-<div class="">
-    <img class="mx-auto" src="../static/images/ebay_circle.png" style="">
-</div>
-
-<div class="md:flex pt-20">
+<div class="md:flex ">
     <div class="p-72">
         <a href="http://buppan-worldwide.com/"><img class="cursor-pointer" src="{% static 'images/blog(sedori).png' %}"></a>
          
